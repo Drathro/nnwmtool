@@ -1,0 +1,72 @@
+*nnwmtool.vim* For Vim 8.0
+
+NaNoWriMo Tools plugin for Vim
+
+About		|nnwmtool-about|
+Usage		|nnwmtool-usage|
+Settings	|nnwmtool-settings|
+Prerequisites	|nnwmtool-prerequisites|
+Installation	|nnwmtool-install|
+License		|nnwmtool-license|
+
+==============================================================================
+About							*nnwmtool-about*
+
+								  *NaNoWriMo*
+The nnwmtool plugin is designed for use with the National Novel Writing Month
+movement. See https://nanowrimo.org/ for more infomration.
+
+==============================================================================
+Usage                                                   *nnwmtool-usage*
+
+		  *nnwmtool-UpdateWC* *nnwmtool#UpdateWC* *nnwmtool-wordcount*
+nnwmtool#UpdateWC()	Reports word count, requests confirmation, and sends
+			word count update to |NaNoWriMo| server. If
+			|g:nnwmuser| or |g:nnwmkey| are not defined, the user
+			will be prompted for these values, and they will
+			persist for the duration of the session. If any
+			argument is passed (ie "nnwmtool#UpdateWC(1)"), the
+			function will update the word count without asking
+			for confirmation.
+
+				    *nnwmtool-ResetCred* *nnwmtool#ResetCred*
+nnwmtool#ResetCred()	Resets the in-memory |NaNoWriMo| user and secret key
+			credentials.
+
+==============================================================================
+Settings						*nnwmtool-settings*
+
+								  *g:nnwmuser*
+g:nnwmuser		|NaNoWriMo| user name variable. May be set in vimrc:
+
+			   let g:nnwmuser="My Nano Name"
+
+								  *g:nnwmkey*
+g:nnwmkey		|NaNoWriMo| secret key variable. Find your secret
+			NaNoWriMo key by logging in and going to
+			https://nanowrimo.org/api/wordcount
+			May be set in vimrc:
+
+			   let g:nnwmkey="NaNoWriMoSecRetKey"
+
+==============================================================================
+Prerequisites					*nnwmtool-prerequisites*
+
+							       *nnwmtool-curl*
+The nnwmtool.vim plugin relies on the external tool "curl" to communicate with
+the |NaNoWriMo| server. To see if curl is available, run "curl --version". If
+not, try https://curl.haxx.se/download.html
+
+==============================================================================
+Installation						*nnwmtool-install*
+
+The nnwmtool should install via popular installers or manually. The install
+should already include the hashdig plugin. https://github.com/Drathro/hashdig
+
+==============================================================================
+License                                                 *nnwmtool-license*
+
+The nnwmtool plugin is released under the MIT license.
+https://opensource.org/licenses/MIT
+
+ vim:tw=78:ts=8:ft=help:norl:

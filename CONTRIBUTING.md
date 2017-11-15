@@ -1,0 +1,1 @@
+Suggestions and improvements to the nnwmtool Vim plugin are welcome. If you want to improve the hashdig Vim plugin, I encourage you to do so at [https://github.com/Drathro/hashdig](https://github.com/Drathro/hashdig).
